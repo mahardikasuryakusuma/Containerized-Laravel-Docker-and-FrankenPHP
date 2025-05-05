@@ -4,12 +4,11 @@
 <p align="center"><a href="https://frankenphp.dev/" target="_blank"><img src="https://raw.githubusercontent.com/dunglas/frankenphp/main/frankenphp.png" width="200" alt="Laravel Logo"></a></p>
 </div>
 
-# 🚀 Laravel + Docker + FrankenPHP + MySQL + phpMyAdmin
+# 🚀 Starter Kit Laravel + Docker + FrankenPHP + MySQL + phpMyAdmin
 
-Project ini menjalankan aplikasi Laravel menggunakan Docker Compose, dengan **FrankenPHP** sebagai web server, **MySQL** untuk basis data, dan **phpMyAdmin** sebagai GUI database. 
-***Untuk Penggunaan Development***
+### ***( Untuk Penggunaan Development )***
+Project ini digunakan sebagai **starter kit** untuk menjalankan aplikasi Laravel menggunakan Docker Compose, dengan **FrankenPHP** sebagai web server, **MySQL** untuk basis data, dan **phpMyAdmin** sebagai GUI database. 
 
----
 
 ## 📦 Tech Stack
 
@@ -21,20 +20,20 @@ Project ini menjalankan aplikasi Laravel menggunakan Docker Compose, dengan **Fr
 
 ---
 
-## 🧑‍💻 How To Run
+## 🧑‍💻 Cara Running
 
-1️⃣ **Clone this repository**
+1️⃣ Clone repository
 ```bash
 git clone <repository-url>
 cd Containerized-Laravel-Docker-and-FrankenPHP
 ```
 
-2️⃣ Build and start the containers: 
+2️⃣ Build dan start container: 
 ```bash
 docker compose up --build
 ```
 
-3️⃣ Install Laravel dependencies
+3️⃣ Instal Laravel dependencies
 ```bash
 docker compose exec app composer install
 ```
@@ -54,12 +53,12 @@ docker compose exec app php artisan key:generate
 docker compose exec app php artisan migrate
 ```
 
-7️⃣ Access the application
+7️⃣ Akses Aplikasi
 ```bash
 Web: http://localhost:8080
 phpMyAdmin: http://localhost:8081
 ```
-## ⚙️ Laravel .env Configuration
+## ⚙️ Laravel .env Konfigurasi
 Pastikan file .env Laravel kamu memiliki konfigurasi koneksi seperti berikut:
 ```bash
 DB_CONNECTION=mysql
