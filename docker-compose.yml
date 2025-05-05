@@ -1,0 +1,51 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: frankenphp-custom
+    container_name: frankenphp_service
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/app
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    working_dir: /app
+    environment:
+      - DB_PORT=3306
+      - DB_HOST=database
+    depends_on:
+      - database
+    mem_limit: 1024m
+    cpus: "0.50"
+
+  database:
+    image: mysql:8.0
+    container_name: mysql_service
+    environment:
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_DATABASE=service
+    ports:
+      - "33061:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    mem_limit: 1g
+    cpus: "1.0"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_service
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_USER=root
+      - PMA_PASSWORD=123
+      - PMA_HOST=database
+      - PHP_UPLOAD_MAX_FILESIZE=100MB
+    depends_on:
+      - database
+    mem_limit: 256m
+    cpus: "0.25"
+
+volumes:
+  db_data:
