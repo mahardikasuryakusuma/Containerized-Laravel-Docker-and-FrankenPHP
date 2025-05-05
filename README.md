@@ -5,7 +5,7 @@
 </div>
 
 
-# 🚀 Starter Kit Laravel + Docker + FrankenPHP + MySQL + phpMyAdmin
+# 🚀 (Starter Kit) Laravel + Docker + FrankenPHP + MySQL + phpMyAdmin
 
 ### ***( Untuk Penggunaan Development )***
 Project ini digunakan sebagai **starter kit** untuk menjalankan aplikasi Laravel menggunakan Docker Compose, dengan **FrankenPHP** sebagai web server, **MySQL** untuk basis data, dan **phpMyAdmin** sebagai GUI database. 
